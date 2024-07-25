@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>Whatsapp Icone Chat</name>
+	<code>Whatsapp Icone Chat</code>
+	<version>1.1.5.0</version>
+	<author>Opencart Master</author>
+	<link>https://www.opencartmaster.com.br</link>
+	
+	<file path="catalog/view/theme/*/template/common/footer.twig">
+		<operation error="skip">
+			<search><![CDATA[</body></html>]]></search>
+			<add position="before"><![CDATA[
+{% if whats_status %}
+<a href="https://web.whatsapp.com/send?phone={{ numero }}&text=" class="whats_box hide-on-phone" target="_blank">
+<img alt="Whatsapp" src="image/{{ imagem }}"  class="whats_img"/> </a>
+<a href="https://api.whatsapp.com/send?phone={{ numero }}&text=" class="whats_box hide-on-dk" target="_blank">
+<img alt="Whatsapp" src="image/{{ imagem }}"  class="whats_img"/> </a>
+
+<style>
+.whats_box{
+    position: fixed;
+    bottom: {{ whats_ver }}px;
+    {% if whats_posicao %}left{% else %}right{% endif %}: {{ whats_hor }}px;
+    z-index:9999 !important;
+}
+
+.whats_img{
+    border: none;
+    padding: 10px 10px 10px 10px;
+}
+
+body:hover .whats_box {
+animation: tremer 0.1s linear infinite;
+  animation-iteration-count: 6;
+}
+
+@keyframes tremer {
+  0% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+  25% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 5px;}
+  50% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+  75% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: -5px;}
+  100% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+}
+
+@media (min-width: 768px) {
+  
+.hide-on-dk{display:none;}
+  
+}
+
+@media only screen and (max-width: 760px) {
+  .hide-on-phone {display: none !important; }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  .hide-on-tablet {display: none !important; } 
+}
+
+</style>
+{% endif %}
+            ]]></add>
+</operation>
+	<operation error="skip">
+			<search><![CDATA[</body>]]></search>
+			<add position="before"><![CDATA[
+{% if whats_status %}
+<a href="https://web.whatsapp.com/send?phone={{ numero }}&text=" class="whats_box hide-on-phone" target="_blank">
+<img alt="Whatsapp" src="image/{{ imagem }}"  class="whats_img"/> </a>
+<a href="https://api.whatsapp.com/send?phone={{ numero }}&text=" class="whats_box hide-on-dk" target="_blank">
+<img alt="Whatsapp" src="image/{{ imagem }}"  class="whats_img"/> </a>
+
+<style>
+.whats_box{
+    position: fixed;
+    bottom: {{ whats_ver }}px;
+    {% if whats_posicao %}left{% else %}right{% endif %}: {{ whats_hor }}px;
+    z-index:9999 !important;
+}
+
+.whats_img{
+    border: none;
+    padding: 10px 10px 10px 10px;
+}
+
+body:hover .whats_box {
+animation: tremer 0.1s linear infinite;
+  animation-iteration-count: 6;
+}
+
+@keyframes tremer {
+  0% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+  25% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 5px;}
+  50% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+  75% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: -5px;}
+  100% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+}
+
+@media (min-width: 768px) {
+  
+.hide-on-dk{display:none;}
+  
+}
+
+@media only screen and (max-width: 760px) {
+  .hide-on-phone {display: none !important; }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  .hide-on-tablet {display: none !important; } 
+}
+
+</style>
+{% endif %}
+            ]]></add>
+</operation>
+		<operation error="skip">
+			<search><![CDATA[<div class="scroll-top"></div>]]></search>
+			<add position="before"><![CDATA[
+{% if whats_status %}
+<a href="https://web.whatsapp.com/send?phone={{ numero }}&text=" class="whats_box hide-on-phone" target="_blank">
+<img alt="Whatsapp" src="image/{{ imagem }}"  class="whats_img"/> </a>
+<a href="https://api.whatsapp.com/send?phone={{ numero }}&text=" class="whats_box hide-on-dk" target="_blank">
+<img alt="Whatsapp" src="image/{{ imagem }}"  class="whats_img"/> </a>
+
+<style>
+.whats_box{
+    position: fixed;
+    bottom: {{ whats_ver }}px;
+    {% if whats_posicao %}left{% else %}right{% endif %}: {{ whats_hor }}px;
+    z-index:9999 !important;
+}
+
+.whats_img{
+    border: none;
+    padding: 10px 10px 10px 10px;
+}
+
+body:hover .whats_box {
+animation: tremer 0.1s linear infinite;
+  animation-iteration-count: 6;
+}
+
+@keyframes tremer {
+  0% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+  25% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 5px;}
+  50% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+  75% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: -5px;}
+  100% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+}
+
+@media (min-width: 768px) {
+  
+.hide-on-dk{display:none;}
+  
+}
+
+@media only screen and (max-width: 760px) {
+  .hide-on-phone {display: none !important; }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  .hide-on-tablet {display: none !important; } 
+}
+
+</style>
+{% endif %}
+            ]]></add>
+</operation>
+		<operation error="skip">
+			<search><![CDATA[{% if not j3.document.isPopup() and j3.settings.get('scrollTop') %}]]></search>
+			<add position="before"><![CDATA[
+{% if whats_status %}
+<a href="https://web.whatsapp.com/send?phone={{ numero }}&text=" class="whats_box hide-on-phone" target="_blank">
+<img alt="Whatsapp" src="image/{{ imagem }}"  class="whats_img"/> </a>
+<a href="https://api.whatsapp.com/send?phone={{ numero }}&text=" class="whats_box hide-on-dk" target="_blank">
+<img alt="Whatsapp" src="image/{{ imagem }}"  class="whats_img"/> </a>
+
+<style>
+.whats_box{
+    position: fixed;
+    bottom: {{ whats_ver }}px;
+    {% if whats_posicao %}left{% else %}right{% endif %}: {{ whats_hor }}px;
+    z-index:9999 !important;
+}
+
+.whats_img{
+    border: none;
+    padding: 10px 10px 10px 10px;
+}
+
+body:hover .whats_box {
+animation: tremer 0.1s linear infinite;
+  animation-iteration-count: 6;
+}
+
+@keyframes tremer {
+  0% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+  25% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 5px;}
+  50% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+  75% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: -5px;}
+  100% {margin-{% if whats_posicao %}left{% else %}right{% endif %}: 0;}
+}
+
+@media (min-width: 768px) {
+  
+.hide-on-dk{display:none;}
+  
+}
+
+@media only screen and (max-width: 760px) {
+  .hide-on-phone {display: none !important; }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  .hide-on-tablet {display: none !important; } 
+}
+
+</style>
+{% endif %}
+            ]]></add>
+</operation>
+	</file>
+	
+			<file path="catalog/view/theme/porto/template/common/footer.tpl">
+		<operation error="skip">
+			<search><![CDATA[</html>]]></search>
+			<add position="before"><![CDATA[
+			
+			<?php  if($whats_status) { ?>
+<a href="https://web.whatsapp.com/send?phone=<?php echo $numero; ?>&text=" class="whats_box hide-on-phone" target="_blank">
+<img alt="Whatsapp" src="image/<?php echo $imagem; ?>"  class="whats_img"/> </a>
+<a href="https://api.whatsapp.com/send?phone=<?php echo $numero; ?>&text=" class="whats_box hide-on-dk" target="_blank">
+<img alt="Whatsapp" src="image/<?php echo $imagem; ?>"  class="whats_img"/> </a>
+
+<style>
+.whats_box{
+    position: fixed;
+    bottom: <?php echo $whats_ver; ?>px;
+    <?php if ($whats_posicao == 1) { echo 'left'; } else { echo 'right'; } ?>: <?php echo $whats_hor; ?>px;
+    z-index:9999 !important;
+}
+
+.whats_img{
+    border: none;
+    padding: 10px 10px 10px 10px;
+}
+
+body:hover .whats_box {
+animation: tremer 0.1s linear infinite;
+  animation-iteration-count: 6;
+}
+
+@keyframes tremer {
+  0% {margin-<?php if ($whats_posicao == 1) { echo 'left'; } else { echo 'right'; } ?>: 0;}
+  25% {margin-<?php if ($whats_posicao == 1) { echo 'left'; } else { echo 'right'; } ?>: 5px;}
+  50% {margin-<?php if ($whats_posicao == 1) { echo 'left'; } else { echo 'right'; } ?>: 0;}
+  75% {margin-<?php if ($whats_posicao == 1) { echo 'left'; } else { echo 'right'; } ?>: -5px;}
+  100% {margin-<?php if ($whats_posicao == 1) { echo 'left'; } else { echo 'right'; } ?>: 0;}
+}
+
+@media (min-width: 768px) {
+  
+.hide-on-dk{display:none;}
+  
+}
+
+@media only screen and (max-width: 760px) {
+  .hide-on-phone {display: none !important; }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  .hide-on-tablet {display: none !important; } 
+}
+
+</style>
+<?php  } ?>
+			
+		  ]]></add>
+</operation>
+	</file>
+	
+	
+		<file path="catalog/controller/common/footer.php">
+		<operation error="skip">
+			<search><![CDATA[$data['contact'] = $this->url->link('information/contact');]]></search>
+			<add position="before"><![CDATA[
+            $data['numero'] = $this->config->get('module_whatsmaster_numero');
+            $data['imagem'] = $this->config->get('module_whatsmaster_image');
+            $data['whats_status'] = $this->config->get('module_whatsmaster_status');
+            $data['whats_posicao'] = $this->config->get('module_whatsmaster_posicao');
+            $data['whats_hor'] = $this->config->get('module_whatsmaster_horizontal');
+            $data['whats_ver'] = $this->config->get('module_whatsmaster_vertical');
+            ]]></add></operation>
+	</file>
+
+</modification>
